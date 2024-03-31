@@ -1,7 +1,10 @@
 # TO Run the Repo
 
-```bash
+#### 
+````bash
 .\gradlew bootRun
-```
 
-### Navigate to localhost:8080/movies
+````
+
+### Navigate
+- http://localhost:8080/movies
