@@ -4,7 +4,6 @@ import com.example.demo.model.Movie;
 import com.example.demo.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -38,7 +37,7 @@ public class MovieService {
             existingMovie.setGenre(updatedMovie.getGenre());
             existingMovie.setReleaseYear(updatedMovie.getReleaseYear());
             existingMovie.setDirector(updatedMovie.getDirector());
-            existingMovie.setAverageRating(updatedMovie.getAverageRating());
+            existingMovie.setAverageRating((updatedMovie.getAverageRating()+existingMovie.getAverageRating())/2);
             return movieRepository.save(existingMovie);
         }
         return null;
